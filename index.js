@@ -10,8 +10,8 @@ app.use(helmet());
 app.use(morgan("short"));
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.json({ status: "online" });
+app.get("/v1/api", (req, res) => {
+  res.json({ message: "Welcome to the Vibe Lounge API" });
 });
 
 app.listen(PORT, () => {
